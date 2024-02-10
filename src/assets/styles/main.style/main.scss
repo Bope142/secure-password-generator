@@ -1,0 +1,50 @@
+@import "./reset.scss";
+@import "./variable.scss";
+@import "./mixin.scss";
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+body {
+  height: 100vh;
+  background: rgb(1, 0, 0);
+  // overflow: hidden;
+  width: 100%;
+  font-family: $fontBebasNeue;
+}
+
+* {
+  user-select: none !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+#root {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: $fontBebasNeue, sans-serif;
+  transition: all 0.3s linear;
+  &.dark {
+    @include apply-theme(
+      $dark-background-color,
+      $dark-text-color,
+      $dark-muted-text-color,
+      $dark-accent-color
+    );
+  }
+  &.light {
+    @include apply-theme(
+      $light-background-color,
+      $light-text-color,
+      $light-muted-text-color,
+      $light-accent-color
+    );
+  }
+}

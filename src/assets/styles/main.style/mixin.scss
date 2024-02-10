@@ -1,0 +1,32 @@
+@import "./variable.scss";
+
+@mixin apply-theme(
+  $background-color,
+  $text-color,
+  $muted-text-color,
+  $accent-color
+) {
+  background-color: $background-color;
+  color: $text-color;
+  &.muted {
+    color: $muted-text-color;
+  }
+}
+
+.dark-theme {
+  @include apply-theme(
+    $dark-background-color,
+    $dark-text-color,
+    $dark-muted-text-color,
+    $dark-accent-color
+  );
+}
+
+.light-theme {
+  @include apply-theme(
+    $light-background-color,
+    $light-text-color,
+    $light-muted-text-color,
+    $light-accent-color
+  );
+}
