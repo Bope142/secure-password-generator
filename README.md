@@ -4,7 +4,7 @@ Secure Password Generator is a simple web application that helps you generate se
 
 ## Demo
 
-You can try out the application live [here](https://secure-password-generator.vercel.app/).
+You can try out the application live [here](https://secure-password-generator-six.vercel.app/).
 
 ## Technologies Used
 
