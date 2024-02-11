@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../../fonts/BebasNeue.ttf");
+}
+
+$fontBebasNeue: "BebasNeue", "sans-serif";
+
+//Variables for light mode
+
+$light-neutral_1: #ffffff;
+$light-neutral_2: #000000; // Background color in light mode
+$light-neutral_3: rgba(0, 0, 0, 0.2); // Slightly muted text color
+$light-neutral_4: #1991ff; // Use the same color as in dark mode
+
+// Variables for dark mode
+
+$dark-background-color: #000000;
+$dark-text-color: #ffffff;
+$dark-muted-text-color: rgba(255, 255, 255, 0.2);
+$dark-accent-color: #1991ff;
+
+$light-background-color: #ffffff;
+$light-text-color: #000000;
+$light-muted-text-color: rgba(0, 0, 0, 0.2);
+$light-accent-color: #1991ff;
+
+$padding__section: 100px;
