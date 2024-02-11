@@ -20,6 +20,7 @@ body {
   user-select: none !important;
   text-decoration: none !important;
   outline: none !important;
+  font-family: $fontBebasNeue, sans-serif !important;
 }
 #root {
   display: flex;
@@ -28,7 +29,7 @@ body {
   overflow: hidden;
 }
 
-body {
+.App {
   font-family: $fontBebasNeue, sans-serif;
   transition: all 0.3s linear;
   &.dark {
@@ -46,5 +47,183 @@ body {
       $light-muted-text-color,
       $light-accent-color
     );
+  }
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  row-gap: 25px;
+}
+
+.container__box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 40px;
+  width: 500px;
+  box-shadow: rgba(17, 17, 26, 0.055) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px,
+    rgba(255, 255, 255, 0.052) 0px 24px 80px;
+}
+
+.input-form {
+  border: none;
+  outline: none;
+  font-family: $fontBebasNeue;
+  padding: 10px;
+}
+.container__header {
+  display: flex;
+  row-gap: 20px;
+  flex-direction: column;
+  & h1 {
+    font-size: 1.5rem;
+  }
+  & .mode__switch {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    column-gap: 10px;
+    & .text {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.dark-mode-switch {
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button {
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(2px);
+  left: 0px;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-switch.dark {
+  background-color: #333;
+}
+
+.dark-mode-switch.light .toggle-button {
+  transform: translateX(20px) translateY(-50%);
+}
+
+.dark-mode-switch.dark .toggle-button {
+  transform: translateX(2px) translateY(-50%);
+}
+
+.container__password_Length {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  & .descrp__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & input {
+      width: 40px;
+      flex: none;
+      text-align: center;
+      background: $dark-accent-color;
+      color: white;
+    }
+  }
+  & #length-pswd {
+    accent-color: $dark-accent-color;
+  }
+}
+
+.container__option_pswd {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  & .item-list {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    & .text__items {
+      font-size: 0.9rem;
+      font-weight: normal;
+    }
+    & input {
+      accent-color: $dark-accent-color;
+    }
+  }
+}
+
+.btn {
+  border: none;
+  outline: none;
+  font-family: $fontBebasNeue;
+  padding: 10px;
+}
+
+#btn-generate {
+  background: $dark-accent-color;
+  color: #fff;
+}
+
+.result {
+  display: flex;
+  & input {
+    width: 100%;
+    background: $dark-accent-color;
+    color: #fff;
+  }
+}
+
+.copyright-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+
+  & .link-extern {
+    padding: 10px;
+    background: $dark-accent-color;
+    border-radius: 0.5rem;
+    & * {
+      fill: white;
+    }
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .container__box {
+    width: 400px;
+    padding: 28px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container__box {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container__box {
+    width: 280px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .container__box {
+    width: auto;
   }
 }
